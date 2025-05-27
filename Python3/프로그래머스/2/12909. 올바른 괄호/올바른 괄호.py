@@ -4,15 +4,14 @@ def solution(s):
     left = 0
 
     for brace in s :
-        if brace == "(" : left = left+1
-        else : left = left-1
+        if brace == "(" : left += 1
+        else : left -= 1
         
         if left < 0 :
-            return False
+            break
         
-        
-    if left != 0 : return False
-    else : return True
+    
+    return left == 0
     
     
         
